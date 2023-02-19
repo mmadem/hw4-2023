@@ -15,137 +15,115 @@ a.skip{
 
 
   /* Requirement 2 code here -- Do not remove this comment. */
-  nav a:focus {
-    border: 10px solid yellow;
 
+
+/* Requirement 4 code here*/
+*:focus{
+
+  border: 10px solid yellow;
+}
+
+
+.container{
+  /* Requirement 5 code here*/
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  row-gap: 30px;
+}
+
+/* Requirements 6-10 here: */
+.intro{
+  background: url("../images/header.jpg") #858585 ;
+
+
+  /* Set a specific height */
+  min-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about, .method, .clients, .contact{
+  grid-column: 2 / span 1;
+}
+
+img{
+  width: 100%;
+}
+
+.about-image, .method-image, .clients-image, .contact-image{
+  grid-column: 1 / -1;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.about, .about-image{
+  grid-row: 1 / span 1;
+}
+
+.method, .method-image{
+  grid-row: 3 / span 1;
+}
+
+.clients, .clients-image{
+  grid-row: 2 / span 1;
+}
+
+.contact, .contact-image{
+  grid-row: 4 / span 1;
+}
+
+.text{
+  align-self: center;
+  max-height: 25vh;
+  overflow: scroll;
+}
+
+@media screen and (min-width: 700px){
+  nav{
+    padding-top: 35px;
+    /*Requirement 11*/
+    text-align: right;
   }
 
+  nav li{
+    margin-left: 5%;
+    margin-right:0;
+  }
 
-  /* Requirement 3 code here -- Do not remove this comment. */
+  
+  /* Requirements 12-15 here: */
+  a.skip:focus{
+    left: 0px;
+    top: 20px;
+    position: absolute;
+  }
+
   .container{
-    /* Requirement 5 code here*/
     display: grid;
-    grid-template-columns:1fr 5fr 1fr;
-    grid-row-gap: 30px;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 300px 300px 300px 300px;
   }
 
-  /* Requirement 4 code here -- Do not remove this comment. */
-  .intro{
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax effect */
-    background-position: center; /* Parallax effect */
-    background-size: cover; /* Parallax effect */
-    color: white;
-    height: 400px; /* Parallax effect */
-  
-
-  
-    /*Set background-image to header.jpg*/
-    background-image: url("../images/header.jpg");/*Code 6c*/
-    
-
+  .about, .method, .clients-image, .contact-image{
+    grid-column: 3 / span 2;
   }
 
-
-  /* Requirement 5 code here -- Do not remove this comment. */
-  .about, .method, .clients, .contact{
-    grid-column: 2 / span 1;
+  .about-image, .method-image, .clients, .contact {
+    grid-column: 2 / span 2;
   }
-  .about-image, .method-image, .clients-image, .contact-image{
-    grid-column: 1 / span 3;
-    max-height: 100%;
-    
-  }
-  
 
-  /* Requirement 6 code here -- Do not remove this comment. */
-  .about, .about-image{
-    grid-row: 2 / span 1;
-   }
-   
-   
-   .method, .method-image{
-    grid-row: 3 / span 1;
-   }
-   
-   
-   .clients, .clients-image{
-    grid-row: 4 / span 1;
-   }
-   
-   
-   .contact, .contact-image{
-    grid-row: 5 / span 1;
-   }
-
-  /* Requirement 7 code here -- Do not remove this comment. */
-  
-
-  /* Requirement 8 code here -- Do not remove this comment. */
-
-
-  .text{
-    max-height: 40vh;
+  text{
     align-self: center;
-    overflow: auto;
   }
-  
+}
 
 
 
 
-
-
-
-
-  /* Requirement 9 code here -- Do not remove this comment. */
-
-
-
-
-  /*Add the media query here.  Make sure to */
-
-  @media screen and (min-width: 800px){
-    nav ul{
-
-      text-align: right;
-      /*vertical-align: middle;*/
-    }
-
-    a.skip:focus {
-      position: fixed;
-      left: 0;
-      top: 20px;
-    }
-  
-    .container{
-      /*code for 11*/
-      display: grid;
-      grid-template-columns: 50px auto 500px auto 50px;
-      grid-template-rows: 10px 300px 300px 300px;
-      row-gap: 30px;
-
-     
-    }
-  
-
-    .about, .method, .clients-image, .contact-image{
-      grid-column: 3 / span 2;
-    }
-  
-
-    .about-image, .method-image, .client, .contact{
-      grid-column: 2 / span 2;
-    }
-
-    .about-image, .method-image, .clients-image, .contact-image {
-      max-width: 100%;
-      height: auto;
-
-    }
-    
-  
-  }
 
 /** Code for prefers reduced motion **/
 /* Make no changes below this line.
