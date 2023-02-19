@@ -78,7 +78,7 @@ img{
 
 .text{
   align-self: center;
-  max-height: 25vh;
+  max-height: 40vh;
   overflow: scroll;
 }
 
@@ -86,7 +86,7 @@ img{
   nav{
     padding-top: 35px;
     /*Requirement 11*/
-    text-align: right;
+    align-items: right;
   }
 
   nav li{
